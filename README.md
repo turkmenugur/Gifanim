@@ -1,31 +1,44 @@
-# 🎥 Gifanim - Jetpack Compose için Güçlü GIF Oynatma Kitaplığı 🎨✨
+# 🎥 Gifanim - A Powerful GIF Playback Library for Jetpack Compose 🎨✨
 
-    🚀 Jetpack Compose projelerinizde GIF animasyonlarını kolayca oynatmak mı istiyorsunuz?  
-
-    Gifanim ile animasyonların kontrolü artık elinizde! 🧙‍♂️
+    🚀 Looking for an easy way to play GIF animations in your Jetpack Compose projects?
+    
+    With Gifanim, you have full control over your animations!  🧙‍♂️
    
 
 
 
-## 🌟 Özellikler
+## 🌟 Features
 
-     🔄 Oynat ve Duraklat: Animasyonu istediğiniz zaman başlatın veya durdurun!
+     🔄 Play and Pause: Start or stop the animation anytime you want!
      
-     ⏳ Zamanlanmış Oynatma: Belirli bir süre oynatabilir ve sonra durdurabilirsiniz.  
+     ⏳ Timed Playback: Play the animation for a set duration and then stop. 
      
-     🕒 Hız Kontrolü: GIF'in oynatma hızını (hızlanma veya yavaşlama) kontrol edin.  
+     🕒 Speed Control: Adjust the playback speed (speed up or slow down) of the GIF.  
      
-     ♾️ Döngü Sayısı: Animasyonu sınırlı veya sonsuz döngüde oynatın.  
+     ♾️ Loop Count: Play the animation with limited or infinite looping.  
      
-     🌈 Tam Özelleştirme: Animasyon ölçeği, renk filtreleri ve daha fazlası!
+     🌈 Full Customization: Customize scale, color filters, and much more!
 
     
 
-## 📦 Kurulum
+## 📦 Installation
 
- 1️⃣ Bağımlılıklar Ekle
+ 1️⃣ Add Dependencies
 
-    Aşağıdakileri 'build.gradle' dosyanızın 'dependencies' bölümüne ekleyin:
+    Add the following to the 'dependencyResolutionManagement' section in your 'settings.gradle' file:
+
+```gradle
+dependencyResolutionManagement {
+    repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
+    repositories {
+        google()
+        mavenCentral()
+        maven { url = uri("https://jitpack.io")  }
+    }
+}
+```
+
+    Then, include this in the dependencies section of your 'build.gradle' file:
 
 ```gradle
 dependencies {
@@ -33,39 +46,39 @@ dependencies {
 }
 ```
 
-## 🚀 Nasıl Kullanılır?
+## 🚀 How to Use?
 
-#### 1️⃣ Basit GIF Oynatma
-
-```kotlin
-GifPlayer(
-    gifUrl = "https://media.giphy.com/media/3o6Zt481isNVuQI1l6/giphy.gif",
-    contentDescription = "Eğlenceli GIF"
-)
-````
-
-
-#### 2️⃣ Gelişmiş Özelleştirme
+#### 1️⃣ Simple GIF Playback
 
 ```kotlin
 GifPlayer(
     gifUrl = "R.drawable.loading_animation",
-    contentDescription = "Yükleme animasyonu",
+    contentDescription = "Loading animation"
+)
+````
+
+
+#### 2️⃣ Advanced Customization
+
+```kotlin
+GifPlayer(
+    gifUrl = "R.drawable.loading_animation",
+    contentDescription = "Loading animation",
     modifier = Modifier.fillMaxSize(),
-    isPlaying = true,             // Animasyonu başlat
-    playbackSpeed = 0.5f,         // Hızı %50 yavaşlatır
-    loopCount = 3,                // Animasyonu 3 kez döngüye al
-    onStart = { println("Başladı!") }, // Animasyon başladığında çağrılır
-    onStop = { println("Durduruldu!") } // Animasyon durduğunda çağrılır
+    isPlaying = true,             // Start the animation
+    playbackSpeed = 0.5f,         // Slow down the speed by 50%
+    loopCount = 3,                // Play the animation 3 times
+    onStart = { println("Started!") }, // Triggered when the animation starts
+    onStop = { println("Stopped!") } // Triggered when the animation stops
 )
 ```
 
-## 🤔 Neden Gifanim?
+## 🤔 Why Gifanim?
     
-    💡 Basit ve kullanıcı dostu kullanım  
+    💡 Simple and user-friendly usage  
     
-    ⚡ Hızlı ve yüksek performans  
+    ⚡ Fast and highly performant  
     
-    🔧 Esnek yapı  
+    🔧 Flexible structure  
     
-    🎨 Jetpack Compose ile mükemmel uyum
+    🎨 Perfect compatibility with Jetpack Compose
