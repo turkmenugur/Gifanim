@@ -1,8 +1,8 @@
-# 🎥 Gifanim - A Powerful GIF Playback Library for Jetpack Compose 🎨✨
+# 🎥 gifanim - A Powerful GIF Playback Library for Jetpack Compose 🎨✨
 
     🚀 Looking for an easy way to play GIF animations in your Jetpack Compose projects?
     
-    With Gifanim, you have full control over your animations!  🧙‍♂️
+    With gifanim, you have full control over your animations!  🧙‍♂️
    
 
 
