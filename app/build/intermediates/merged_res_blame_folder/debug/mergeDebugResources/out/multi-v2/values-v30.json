@@ -1,0 +1,19 @@
+{
+    "logs": [
+        {
+            "outputFile": "com.trkmn.gifanim.app-mergeDebugResources-45:/values-v30/values-v30.xml",
+            "map": [
+                {
+                    "source": "C:\\Users\\trkmn\\.gradle\\caches\\8.9\\transforms\\be8b710e95e407990080ac0c2f9cf5d7\\transformed\\material3-release\\res\\values-v30\\values-v30.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "72",
+                        "endOffsets": "123"
+                    }
+                }
+            ]
+        }
+    ]
+}
