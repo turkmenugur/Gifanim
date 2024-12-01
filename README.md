@@ -10,14 +10,10 @@
 ## 🌟 Features
 
      🔄 Play and Pause: Start or stop the animation anytime you want!
-     
-     ⏳ Timed Playback: Play the animation for a set duration and then stop. 
-     
-     🕒 Speed Control: Adjust the playback speed (speed up or slow down) of the GIF.  
-     
+               
      ♾️ Loop Count: Play the animation with limited or infinite looping.  
      
-     🌈 Full Customization: Customize scale, color filters, and much more!
+     🌈 Full Customization: Customize scale and much more!
 
     
 
@@ -52,8 +48,7 @@ dependencies {
 
 ```kotlin
 GifPlayer(
-    gifUrl = "R.drawable.loading_animation",
-    contentDescription = "Loading animation"
+    gifResId = R.drawable.loading_animation,
 )
 ````
 
@@ -62,16 +57,21 @@ GifPlayer(
 
 ```kotlin
 GifPlayer(
-    gifUrl = "R.drawable.loading_animation",
-    contentDescription = "Loading animation",
-    modifier = Modifier.fillMaxSize(),
-    isPlaying = true,             // Start the animation
-    playbackSpeed = 0.5f,         // Slow down the speed by 50%
-    loopCount = 3,                // Play the animation 3 times
-    onStart = { println("Started!") }, // Triggered when the animation starts
-    onStop = { println("Stopped!") } // Triggered when the animation stops
+    gifResId = R.drawable.loading_animation,
+    modifier = Modifier.padding(16.dp),
+    loopCount = 3,
+    onStart = {
+        Toast.makeText(context, "Animation started", Toast.LENGTH_SHORT).show()
+    },
+    onStop = {
+        Toast.makeText(context, "Animation is over!", Toast.LENGTH_SHORT).show()
+    },
+    width = 200,
+    height = 200
 )
 ```
+
+![gifanim usage](https://github.com/user-attachments/assets/93d064f2-1dfc-43f9-97da-eb4b25506565)
 
 ## 🤔 Why Gifanim?
     
